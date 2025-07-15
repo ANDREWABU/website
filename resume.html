@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume – Andrew Abu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resume.css" />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        font-family: system-ui, sans-serif;
+        color: white;
+        text-align: center;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100vh;
+        border: none;
+      }
+
+      .below-resume {
+        padding: 30px 20px;
+        background-color: black;
+      }
+
+      h1 {
+        color: red;
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s ease;
+        margin-top: 15px;
+      }
+
+      .back-btn:hover {
+        box-shadow: 0 0 10px red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <!-- ✅ NAVIGATION BAR -->
+      <nav>
+        <div class="logo">ANDREW <span>ABU</span></div>
+        <ul>
+          <li><a href="index.html">About</a></li>
+          <li><a href="proj.html">Projects</a></li>
+          <li><a href="exp.html">Experience</a></li>
+          <li><a href="resume.html" class="active">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-line"></div>
+
+      <!-- 🧾 Resume PDF View -->
+      <iframe src="files/DE Resume ABU_ copy.pdf"></iframe>
+
+      <!-- 🔻 Optional Footer -->
+      <div class="below-resume">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+      </div>
+    </div>
+  </body>
+</html>

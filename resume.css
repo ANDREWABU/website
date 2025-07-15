@@ -1,0 +1,25 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  #resume {
+    padding: 60px 0;
+    background: black;
+    margin-top: 1000px; /* adds spacing from top */
+  }
+  
+  #resume h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+  }
+  
+  #resume iframe {
+    width: 100%;
+    height: 800px;
+    border: none;
+    display: block;
+    margin: 0 auto;
+  }
+  

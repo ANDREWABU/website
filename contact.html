@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact Me</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      form {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      input,
+      textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .back-btn {
+        display: inline-block;
+        margin-top: 30px;
+        background-color: red;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Contact Me</h1>
+
+    <!-- ✅ Updated Formspree link -->
+    <form action="https://formspree.io/f/mnnzqpen" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+      ></textarea>
+      <button type="submit">Send</button>
+    </form>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </body>
+</html>

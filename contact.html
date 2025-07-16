@@ -3,13 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
+      /* Contact page styling */
       body {
         background-color: black;
         color: white;
         font-family: Arial, sans-serif;
-        text-align: center;
         padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 100px;
       }
 
       form {
@@ -47,14 +57,109 @@
         border-radius: 8px;
         text-decoration: none;
         font-weight: bold;
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* NAVBAR styling (copied from main style) */
+      nav {
+        padding: 10px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        position: relative;
+        background-color: black;
+      }
+
+      .logo {
+        font-weight: bold;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      .logo span {
+        color: red;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav .active {
+        color: red;
+      }
+
+      .hamburger {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+          position: absolute;
+          right: 25px;
+          top: 15px;
+        }
+
+        nav ul {
+          display: none;
+          flex-direction: column;
+          gap: 1rem;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: black;
+          padding: 20px;
+          border-top: 1px solid red;
+          z-index: 999;
+        }
+
+        nav ul.show {
+          display: flex;
+        }
       }
     </style>
   </head>
+  
 
   <body>
+    <!-- 🔥 NAVBAR -->
+    <nav>
+      <div class="logo">ANDREW <span>ABU</span></div>
+      <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul id="myLinks">
+        <li><a href="index.html">About</a></li>
+        <li><a href="proj.html">Projects</a></li>
+        <li><a href="exp.html">Experience</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    
+
+    <!-- 💬 CONTACT FORM -->
     <h1>Contact Me</h1>
 
-    <!-- ✅ Updated Formspree link -->
     <form action="https://formspree.io/f/mnnzqpen" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
       <input type="email" name="email" placeholder="Your Email" required />
@@ -67,6 +172,10 @@
       <button type="submit">Send</button>
     </form>
 
-    <a href="index.html" class="back-btn">← Back to Home</a>
-  </body>
-</html>
+    <a href="index.html" class="back-btn">← Back to About</a>
+
+    <!-- ✅ Hamburger Script -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myL
+    

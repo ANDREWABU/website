@@ -6,13 +6,20 @@
     <title>Experience - Andrew Abu</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="exp.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <div class="main">
       <!-- ✅ NAVBAR -->
       <nav>
         <div class="logo">ANDREW <span>ABU</span></div>
-        <ul>
+        <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <ul id="myLinks">
           <li><a href="index.html">About</a></li>
           <li><a href="proj.html">Projects</a></li>
           <li><a href="exp.html" class="active">Experience</a></li>
@@ -20,6 +27,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
       <div class="nav-line"></div>
 
       <!-- ✅ YOUR EXPERIENCE CONTENT -->
@@ -141,5 +149,35 @@
         </div>
       </section>
     </div>
+
+    <!-- ✅ HAMBURGER SCRIPT -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        x.classList.toggle("show");
+      }
+    </script>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="socials">
+          <a
+            href="https://www.instagram.com/an_dyabu?igsh=MTZpOXhxeXR3ZmQ4Zw%3D%3D&utm_source=qr"
+            target="_blank"
+          >
+            <img src="images/igg.JPG" alt="Instagram" class="social-icon" />
+          </a>
+          <a
+            href="https://www.facebook.com/share/1GEiUpop8Z/?mibextid=wwXIfr"
+            target="_blank"
+          >
+            <img src="images/fbb.JPG" alt="Facebook" class="social-icon" />
+          </a>
+        </div>
+        <div class="footer-text">
+          <span class="name">Andrew Abu</span>
+          <span class="copyright">© 2025</span>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

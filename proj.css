@@ -53,3 +53,69 @@ body {
 .project-card a:hover {
     background-color: #cc0000;
 }
+
+.back-link {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-link a {
+    color: white;
+    background-color: orangered;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.back-link a:hover {
+    background-color: crimson;
+    color: #fff;
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile Nav */
+#myLinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    #myLinks {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: black;
+        padding: 20px;
+        border: 1px solid red;
+        width: 200px;
+        z-index: 999;
+    }
+
+    #myLinks.show {
+        display: flex;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

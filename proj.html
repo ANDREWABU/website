@@ -5,12 +5,18 @@
     <title>Projects - Andrew Abu</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="proj.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
     <div class="main">
       <nav>
         <div class="logo">ANDREW <span>ABU</span></div>
-        <ul>
+
+        <!-- Hamburger -->
+        <div class="hamburger" onclick="myFunction()">☰</div>
+
+        <!-- Mobile Menu -->
+        <ul id="myLinks">
           <li><a href="index.html">About</a></li>
           <li><a href="proj.html" class="active">Projects</a></li>
           <li><a href="exp.html">Experience</a></li>
@@ -18,6 +24,7 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+
       <div class="nav-line"></div>
 
       <section class="projects-section">
@@ -38,7 +45,9 @@
             A simple calculator that handles basic math operations!!! OUT SOON
             !!!.
           </p>
-          <a href="LINK_TO_CALCULATOR" target="_blank">View Project</a>
+          <a href="https://andrew-calculator.vercel.app" target="_blank"
+            >View Project</a
+          >
         </div>
 
         <div class="project-card">
@@ -49,7 +58,18 @@
           </p>
           <a href="LINK_TO_TODO_LIST" target="_blank">View Project</a>
         </div>
+
+        <div class="back-link">
+          <a href="index.html">← Back to About</a>
+        </div>
       </section>
+
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          x.classList.toggle("show");
+        }
+      </script>
     </div>
   </body>
 </html>

@@ -128,7 +128,8 @@ nav .active {
     border-radius: 6px;
     text-decoration: none;
     transition: all 0.3s ease;
-    margin: 20px 0;
+    margin: 20px 20px 20px 0;
+
     box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
 }
 
@@ -143,7 +144,7 @@ nav .active {
     min-width: 350px;
     max-width: 500px;
     height: 650px;
-    background: url(images/profile.jpg) no-repeat center/cover;
+    background: url(images/ann.jpg) no-repeat center/cover;
     box-shadow: 0 0 100px rgba(255, 0, 0, 0.25);
     border-radius: 12px;
     filter: brightness(1.05) contrast(1.05);

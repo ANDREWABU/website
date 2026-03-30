@@ -3,167 +3,226 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Experience - Andrew Abu</title>
+    <title>Experience — Andrew Abu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="exp.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
-    <div class="main">
-      <!-- ✅ NAVBAR -->
-      <nav>
-        <div class="logo">ANDREW <span>ABU</span></div>
-        <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <ul id="myLinks">
-          <li><a href="index.html">About</a></li>
-          <li><a href="proj.html">Projects</a></li>
-          <li><a href="exp.html" class="active">Experience</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
 
-      <div class="nav-line"></div>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <nav>
+      <div class="logo">ANDREW <span>ABU</span></div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="myLinks">
+        <li><a href="index.html">About</a></li>
+        <li><a href="proj.html">Projects</a></li>
+        <li><a href="exp.html" class="active">Experience</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </nav>
+    <div class="nav-line"></div>
 
-      <!-- ✅ YOUR EXPERIENCE CONTENT -->
-      <section id="experience-2">
-        <h2 class="experience-title">Professional Experience</h2>
+    <!-- ── EXPERIENCE ─────────────────────────────────────── -->
+    <section class="exp-page">
 
-        <div class="exp-entry">
-          <div class="exp-header">
-            <h3>Front Desk Attendant</h3>
-            <span class="exp-date">September 2025 – current </span>
+      <div class="page-header reveal">
+        <div class="section-label">Work History</div>
+        <h1>Professional <span class="red-text">Experience</span></h1>
+        <p class="page-subtitle">Roles and responsibilities I've taken on across different industries.</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal" style="transition-delay:0.05s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
           </div>
-          <div class="company">
-            Athletics Complex,wilfrifd laurier University ON
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Software Engineering Intern</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Candoor — A platform connecting mentors and mentees
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                Dec 2025 – Present
+              </span>
+            </div>
+            <ul>
+              <li>Built a timezone conversion feature for meeting scheduling, reducing time-to-book meetings by 40%.</li>
+              <li>Led backend refactor to introduce automated testing, increasing unit test coverage from 0% to 80%, significantly improving code reliability.</li>
+              <li>Identified and resolved bugs in timezone handling logic, improving feature accuracy and reducing user-reported issues.</li>
+            </ul>
+            <div class="exp-skills">
+              <span>PHP</span><span>Laravel</span><span>React</span><span>JavaScript</span><span>MySQL</span><span>AWS</span>
+            </div>
           </div>
-          <ul>
-            <li>
-              - Serve as the first point of contact for gym users, providing
-              assistance with memberships, facility information, and equipment
-              rentals.
-            </li>
-            <li>
-              - Manage facility access through student ID verification and
-              membership systems.
-            </li>
-            <li>
-              - Assist patrons with program information, locker rentals, and
-              equipment checkout.
-            </li>
-            <li>
-              - Maintain a safe and welcoming environment by monitoring facility
-              policies and responding to inquiries promptly.
-            </li>
-          </ul>
         </div>
 
-        <div class="exp-entry">
-          <div class="exp-header">
-            <h3>Campus Event Operations Assistant</h3>
-            <span class="exp-date">June 2025 – september 2025</span>
+        <div class="timeline-item reveal" style="transition-delay:0.08s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
           </div>
-          <div class="company">Wilfrid Laurier University,ON Canada</div>
-          <ul>
-            <li>
-              - Coordinated day-of logistics for the campus move-in process,
-              ensuring smooth operations between residence staff and student
-              arrival teams.
-            </li>
-            <li>
-              - Directed students and families during peak arrival hours,
-              streamlining traffic and check-in efficiency.
-            </li>
-            <li>
-              - Demonstrated leadership, adaptability, and strong interpersonal
-              communication in a high-volume environment.
-            </li>
-          </ul>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Front Desk Attendant</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Athletics Complex, Wilfrid Laurier University — Waterloo, ON
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                2025 – Present
+              </span>
+            </div>
+            <ul>
+              <li>Assisted 100+ members daily with facility access, memberships, and equipment rentals, ensuring smooth operations.</li>
+              <li>Resolved account and system-related issues, reducing access delays and improving customer satisfaction.</li>
+              <li>Troubleshot technical and system issues in real time, minimizing downtime and maintaining operational flow.</li>
+              <li>Maintained a professional and welcoming environment while enforcing facility policies and procedures.</li>
+            </ul>
+            <div class="exp-skills">
+              <span>Customer Service</span><span>Communication</span><span>Membership Systems</span><span>Problem-Solving</span><span>Team Leadership</span>
+            </div>
+          </div>
         </div>
 
-        <div class="exp-entry">
-          <div class="exp-header">
-            <h3>Customer Service Rep & Technical assistant Attendant</h3>
-            <span class="exp-date">May 2025-Sep 2025</span>
+        <div class="timeline-item reveal" style="transition-delay:0.1s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
           </div>
-          <div class="company">
-            Santas Village Acoasment Park – Bracebridge ON canada
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Campus Event Operations Assistant</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Wilfrid Laurier University — ON, Canada
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                Jun 2025 – Sep 2025
+              </span>
+            </div>
+            <ul>
+              <li>Coordinated day-of logistics for the campus move-in process, ensuring smooth operations between residence staff and student arrival teams.</li>
+              <li>Directed students and families during peak arrival hours, streamlining traffic and check-in efficiency.</li>
+              <li>Demonstrated leadership, adaptability, and strong interpersonal communication in a high-volume environment.</li>
+            </ul>
           </div>
-          <ul>
-            <li>
-              - Utilized ride management systems and digital ticketing software
-              to streamline operations and boost guest experience.
-            </li>
-            <li>
-              - Resolved customer concerns efficiently through strong
-              communication, tech tools, and real-time problem-solving.
-            </li>
-            <li>
-              - Collaborated with cross-functional teams to enhance workflows,
-              enabling smoother park-wide coordination.
-            </li>
-            <li>
-              - Maintained detailed digital ride logs and service reports,
-              ensuring accuracy for safety audits.
-            </li>
-            <li>
-              - Enhanced customer satisfaction by promptly addressing concerns
-              and providing accurate information.
-            </li>
-          </ul>
-        </div>
-        <div class="exp-entry">
-          <div class="exp-header">
-            <h3>Digital Media Assistant</h3>
-            <span class="exp-date">2020 – 2025</span>
-          </div>
-          <div class="company">Unity Baptist Church – Nigeria</div>
-          <ul>
-            <li>
-              - Operate media and production equipment during live services and
-              community events.
-            </li>
-            <li>
-              - Design social media graphics and digital flyers to promote
-              upcoming programs and outreach initiatives.
-            </li>
-            <li>
-              - Collaborate with team members to maintain smooth sound,
-              lighting, and video transitions during events.
-            </li>
-          </ul>
-        </div>
-        <div class="exp-entry">
-          <div class="exp-header">
-            <h3>Student House Council - Volunteer</h3>
-            <span class="exp-date">2024 September – May 2025</span>
-          </div>
-          <div class="company">Wilfrid Laurier University</div>
-          <ul>
-            <li>
-              - Helped plan and organize fun and smooth-running campus events.
-            </li>
-            <li>
-              - Contributed to a welcoming and engaging student environment.
-            </li>
-            <li>
-              - Directed students and families during peak arrival hours,
-              streamlining traffic and check-in efficiency.
-            </li>
-          </ul>
         </div>
 
-        <!-- ✅ SKILLS -->
-        <div class="skills-wrapper">
-          <h2 class="skills-title">Skills</h2>
-          <div class="skills-grid">
-            <div class="skill-group">
+        <div class="timeline-item reveal" style="transition-delay:0.15s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Customer Service Rep &amp; Technical Assistant</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Santa's Village Amusement Park — Bracebridge, ON
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                May 2025 – Sep 2025
+              </span>
+            </div>
+            <ul>
+              <li>Utilized ride management systems and digital ticketing software to streamline operations and boost guest experience.</li>
+              <li>Resolved customer concerns efficiently through strong communication, tech tools, and real-time problem-solving.</li>
+              <li>Collaborated with cross-functional teams to enhance workflows, enabling smoother park-wide coordination.</li>
+              <li>Maintained detailed digital ride logs and service reports, ensuring accuracy for safety audits.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" style="transition-delay:0.2s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Digital Media Assistant</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Unity Baptist Church — Nigeria
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                2020 – 2025
+              </span>
+            </div>
+            <ul>
+              <li>Operated media and production equipment during live services and community events.</li>
+              <li>Designed social media graphics and digital flyers to promote upcoming programs and outreach initiatives.</li>
+              <li>Collaborated with team members to maintain smooth sound, lighting, and video transitions during events.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" style="transition-delay:0.25s">
+          <div class="timeline-marker">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-header">
+              <div>
+                <h3>Student House Council — Volunteer</h3>
+                <div class="company">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Wilfrid Laurier University
+                </div>
+              </div>
+              <span class="exp-date">
+                <i class="fa-regular fa-calendar"></i>
+                Sep 2024 – May 2025
+              </span>
+            </div>
+            <ul>
+              <li>Helped plan and organize engaging campus events for the student community.</li>
+              <li>Contributed to a welcoming and inclusive student environment on residence.</li>
+              <li>Directed students and families during peak arrival hours, streamlining check-in efficiency.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ── SKILLS ─────────────────────────────────────────── -->
+      <div class="skills-section reveal">
+        <div class="section-label">Toolkit</div>
+        <h2 class="skills-heading">Skills &amp; <span class="red-text">Technologies</span></h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-group reveal" style="transition-delay:0.05s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-code"></i>
               <h3>Programming</h3>
+            </div>
+            <div class="skill-pills">
               <span>Java</span>
               <span>Python</span>
               <span>HTML</span>
@@ -171,53 +230,78 @@
               <span>C</span>
               <span>JavaScript</span>
             </div>
-            <div class="skill-group">
-              <h3>Tools</h3>
+          </div>
+
+          <div class="skill-group reveal" style="transition-delay:0.12s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-wrench"></i>
+              <h3>Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-pills">
               <span>GitHub</span>
               <span>Microsoft Office</span>
               <span>AutoCAD</span>
               <span>MATLAB</span>
-            </div>
-            <div class="skill-group">
-              <h3>Other</h3>
-              <span>Documentation & Reporting</span>
-              <span>Digital Infrastructure Setup</span>
-              <span>Team Leadership</span>
-              <span>Customer Service</span>
+              <span>Vercel</span>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
 
-    <!-- ✅ HAMBURGER SCRIPT -->
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        x.classList.toggle("show");
-      }
-    </script>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/an_dyabu?igsh=MTZpOXhxeXR3ZmQ4Zw%3D%3D&utm_source=qr"
-            target="_blank"
-          >
-            <img src="images/igg.JPG" alt="Instagram" class="social-icon" />
+          <div class="skill-group reveal" style="transition-delay:0.19s">
+            <div class="skill-group-header">
+              <i class="fa-solid fa-people-group"></i>
+              <h3>Soft Skills</h3>
+            </div>
+            <div class="skill-pills">
+              <span>Documentation</span>
+              <span>Digital Infrastructure</span>
+              <span>Team Leadership</span>
+              <span>Customer Service</span>
+              <span>Problem Solving</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">ANDREW <span>ABU</span></span>
+          <p>Building the web, one project at a time.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/andrew-abu-3bb797286/" class="footer-link" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
           </a>
-          <a
-            href="https://www.facebook.com/share/1GEiUpop8Z/?mibextid=wwXIfr"
-            target="_blank"
-          >
-            <img src="images/fbb.JPG" alt="Facebook" class="social-icon" />
+          <a href="https://www.instagram.com/an_dyabu" class="footer-link" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:andyabu@gmail.com" class="footer-link" title="Email">
+            <i class="fa-solid fa-envelope"></i>
           </a>
         </div>
-        <div class="footer-text">
-          <span class="name">Andrew Abu</span>
-          <span class="copyright">© 2025</span>
+        <div class="footer-copy">
+          <span>© 2025 Andrew Abu</span><br />
+          <span style="font-size:0.7rem;opacity:0.55">All rights reserved</span>
         </div>
       </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById('hamburgerBtn');
+      const menu = document.getElementById('myLinks');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        btn.classList.toggle('open');
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
   </body>
 </html>

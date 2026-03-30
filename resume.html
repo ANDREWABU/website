@@ -3,110 +3,161 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume – Andrew Abu</title>
+    <title>Resume — Andrew Abu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="resume.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+
     <style>
       body {
-        margin: 0;
-        padding: 0;
-        background-color: black;
-        font-family: system-ui, sans-serif;
-        color: white;
+        background-color: var(--bg);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .resume-page {
+        flex: 1;
+        padding: 70px 8% 90px;
+        position: relative;
+        z-index: 1;
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .resume-header {
         text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .resume-header h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2.4rem, 5vw, 3.8rem);
+        font-weight: 800;
+        letter-spacing: -0.05em;
+        color: var(--text);
+        margin-bottom: 14px;
+      }
+
+      .resume-header p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        margin-bottom: 28px;
+      }
+
+      .resume-actions {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .resume-frame-wrapper {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 20px 80px rgba(0,0,0,0.5);
       }
 
       iframe {
         width: 100%;
-        height: 100vh;
+        height: 85vh;
+        min-height: 700px;
+        display: block;
         border: none;
-      }
-
-      .below-resume {
-        padding: 30px 20px;
-        background-color: black;
-      }
-
-      h1 {
-        color: red;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      .back-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: red;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 6px;
-        transition: 0.3s ease;
-        margin-top: 15px;
-      }
-
-      .back-btn:hover {
-        box-shadow: 0 0 10px red;
+        background: white;
       }
     </style>
   </head>
 
   <body>
-    <div class="main">
-      <nav>
-        <div class="logo">ANDREW <span>ABU</span></div>
-        <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-        <ul id="myLinks">
-          <li><a href="index.html">About</a></li>
-          <li><a href="proj.html">Projects</a></li>
-          <li><a href="exp.html">Experience</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
 
-      <div class="nav-line"></div>
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
+    <nav>
+      <div class="logo">ANDREW <span>ABU</span></div>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul id="myLinks">
+        <li><a href="index.html">About</a></li>
+        <li><a href="proj.html">Projects</a></li>
+        <li><a href="exp.html">Experience</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </nav>
+    <div class="nav-line"></div>
 
-      <iframe src="files/detailedresume.pdf"></iframe>
+    <main class="resume-page reveal">
 
-      <div class="below-resume">
-        <a href="index.html" class="back-btn">← Back to about</a>
-      </div>
-    </div>
-
-    <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        x.classList.toggle("show");
-      }
-    </script>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="socials">
-          <a
-            href="https://www.instagram.com/an_dyabu?igsh=MTZpOXhxeXR3ZmQ4Zw%3D%3D&utm_source=qr"
-            target="_blank"
-          >
-            <img src="images/igg.JPG" alt="Instagram" class="social-icon" />
+      <div class="resume-header">
+        <div class="section-label">View &amp; Download</div>
+        <h1>My <span class="red-text">Resume</span></h1>
+        <p>A full breakdown of my experience, education, and skills.</p>
+        <div class="resume-actions">
+          <a href="files/detailedresume.pdf" class="btn btn-primary" download>
+            <i class="fa-solid fa-download"></i>
+            Download PDF
           </a>
-          <a
-            href="https://www.facebook.com/share/1GEiUpop8Z/?mibextid=wwXIfr"
-            target="_blank"
-          >
-            <img src="images/fbb.JPG" alt="Facebook" class="social-icon" />
+          <a href="contact.html" class="btn btn-ghost">
+            <i class="fa-solid fa-paper-plane"></i>
+            Contact Me
           </a>
         </div>
-        <div class="footer-text">
-          <span class="name">Andrew Abu</span>
-          <span class="copyright">© 2025</span>
+      </div>
+
+      <div class="resume-frame-wrapper">
+        <iframe src="files/detailedresume.pdf" title="Andrew Abu Resume"></iframe>
+      </div>
+
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">ANDREW <span>ABU</span></span>
+          <p>Building the web, one project at a time.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/andrew-abu-3bb797286/" class="footer-link" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/an_dyabu" class="footer-link" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:andyabu@gmail.com" class="footer-link" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <div class="footer-copy">
+          <span>© 2025 Andrew Abu</span><br />
+          <span style="font-size:0.7rem;opacity:0.55">All rights reserved</span>
         </div>
       </div>
     </footer>
+
+    <script>
+      const btn = document.getElementById('hamburgerBtn');
+      const menu = document.getElementById('myLinks');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        btn.classList.toggle('open');
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.05 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
   </body>
 </html>

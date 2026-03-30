@@ -2,180 +2,144 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Contact Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <style>
-      /* Contact page styling */
-      body {
-        background-color: black;
-        color: white;
-        font-family: Arial, sans-serif;
-        padding: 40px 20px;
-      }
+    <title>Contact — Andrew Abu</title>
 
-      h1 {
-        text-align: center;
-        margin-top: 100px;
-      }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-      form {
-        max-width: 500px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
-
-      input,
-      textarea {
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        font-size: 16px;
-      }
-
-      button {
-        padding: 12px;
-        background-color: red;
-        color: white;
-        font-weight: bold;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      .back-btn {
-        display: inline-block;
-        margin-top: 30px;
-        background-color: red;
-        color: white;
-        padding: 12px 20px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        text-align: center;
-        width: 100%;
-        max-width: 200px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      /* NAVBAR styling (copied from main style) */
-      nav {
-        padding: 10px 25px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        position: relative;
-        background-color: black;
-      }
-
-      .logo {
-        font-weight: bold;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-      }
-
-      .logo span {
-        color: red;
-      }
-
-      nav ul {
-        display: flex;
-        gap: 2rem;
-      }
-
-      nav a {
-        font-size: 1rem;
-        font-weight: bold;
-        color: white;
-        text-decoration: none;
-      }
-
-      nav a:hover,
-      nav .active {
-        color: red;
-      }
-
-      .hamburger {
-        display: none;
-        font-size: 2rem;
-        color: white;
-        cursor: pointer;
-      }
-
-      @media (max-width: 768px) {
-        .hamburger {
-          display: block;
-          position: absolute;
-          right: 25px;
-          top: 15px;
-        }
-
-        nav ul {
-          display: none;
-          flex-direction: column;
-          gap: 1rem;
-          width: 100%;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          background-color: black;
-          padding: 20px;
-          border-top: 1px solid red;
-          z-index: 999;
-        }
-
-        nav ul.show {
-          display: flex;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
-  
 
   <body>
-    <!-- 🔥 NAVBAR -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow"></div>
+
+    <!-- ── NAVBAR ─────────────────────────────────────────── -->
     <nav>
       <div class="logo">ANDREW <span>ABU</span></div>
-      <a href="javascript:void(0);" class="hamburger" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
       <ul id="myLinks">
         <li><a href="index.html">About</a></li>
         <li><a href="proj.html">Projects</a></li>
         <li><a href="exp.html">Experience</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html" class="active nav-cta">Hire Me</a></li>
       </ul>
     </nav>
-    
+    <div class="nav-line"></div>
 
-    <!-- 💬 CONTACT FORM -->
-    <h1>Contact Me</h1>
+    <!-- ── CONTACT ────────────────────────────────────────── -->
+    <main class="contact-page">
 
-    <form action="https://formspree.io/f/mnnzqpen" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea
-        name="message"
-        rows="5"
-        placeholder="Your Message"
-        required
-      ></textarea>
-      <button type="submit">Send</button>
-    </form>
+      <div class="contact-layout">
 
-    <a href="index.html" class="back-btn">← Back to About</a>
+        <div class="contact-left reveal">
+          <div class="section-label">Get in Touch</div>
+          <h1>Let's Build<br /><span class="red-text">Something Great</span></h1>
+          <p class="contact-desc">
+            Have a project in mind? Looking for a website for your startup or business?
+            I'd love to hear from you. Send me a message and I'll get back to you quickly.
+          </p>
 
-    <!-- ✅ Hamburger Script -->
+          <div class="contact-info">
+            <a href="mailto:andyabu@gmail.com" class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span class="contact-info-label">Email</span>
+                <span class="contact-info-val">andyabu@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/andrew-abu-3bb797286/" target="_blank" class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-brands fa-linkedin"></i></div>
+              <div>
+                <span class="contact-info-label">LinkedIn</span>
+                <span class="contact-info-val">Andrew Abu</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/an_dyabu" target="_blank" class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <span class="contact-info-label">Instagram</span>
+                <span class="contact-info-val">@an_dyabu</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-right reveal" style="transition-delay:0.12s">
+          <form action="https://formspree.io/f/mnnzqpen" method="POST" class="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Website for my startup" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">
+              <i class="fa-solid fa-paper-plane"></i>
+              Send Message
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="logo">ANDREW <span>ABU</span></span>
+          <p>Building the web, one project at a time.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://www.linkedin.com/in/andrew-abu-3bb797286/" class="footer-link" target="_blank" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://www.instagram.com/an_dyabu" class="footer-link" target="_blank" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="mailto:andyabu@gmail.com" class="footer-link" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <div class="footer-copy">
+          <span>© 2025 Andrew Abu</span><br />
+          <span style="font-size:0.7rem;opacity:0.55">All rights reserved</span>
+        </div>
+      </div>
+    </footer>
+
     <script>
-      function myFunction() {
-        var x = document.getElementById("myL
-    
+      const btn = document.getElementById('hamburgerBtn');
+      const menu = document.getElementById('myLinks');
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('show');
+        btn.classList.toggle('open');
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    </script>
+  </body>
+</html>

@@ -712,7 +712,7 @@ nav .active { color: var(--red) !important; }
   .hero-stats { justify-content: center; }
   .hero-desc, .section-desc { margin-left: auto; margin-right: auto; }
   .hero-badge { margin-left: auto; margin-right: auto; }
-  .profile-card { left: 50%; transform: translateX(-50%); }
+  .profile-card { display: none; }
 
   .profile-wrapper { width: 280px; height: 340px; }
 
